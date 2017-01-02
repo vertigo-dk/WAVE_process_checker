@@ -1,6 +1,6 @@
 import subprocess, signal, os, time
 
-refresh_rate = 60.0 # time in s between checks
+refresh_rate = 2.0 # time in s between checks
 
 def check_processes():
     p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE) # check all processes
@@ -12,6 +12,7 @@ def check_processes():
     for line in out.splitlines():
         if '/Applications/TextEdit.app/Contents/MacOS/TextEdit' in line:
             pid = int(line.split(None, 1)[0])
+            print(pid)
             text_edit_running = True
             print('Text edit running')
 
@@ -22,5 +23,6 @@ def check_processes():
 
 if __name__ == "__main__":
     while True:
-      check_processes()
-      time.sleep(refresh_rate)
+        os.system('sudo ./killunresponsive/killunresponsive ')
+        check_processes()
+        time.sleep(refresh_rate)

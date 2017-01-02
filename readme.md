@@ -23,6 +23,12 @@ Install dependencies using pip:
 $ pip install -r requirements.txt
 ```
 
+Finally we need Chris Davisons killunresponsive-script
+
+```
+git clone https://github.com/cold-logic/killunresponsive
+```
+
 The program can now run:
 ```
 $ python process_checker.py
