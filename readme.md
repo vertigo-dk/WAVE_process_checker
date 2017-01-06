@@ -1,6 +1,9 @@
 ## Process checker
 Checks processes running and relaunches if they're not running.. should of course never happen!
 
+#### TODO
+Make this more similar to Sukkerkor_Watchdog, it's way better.
+
 ### Installation
 This program uses Python in a virtual environment.
 
